@@ -100,7 +100,7 @@ For Each ws In Worksheets
     max_dec = 0
     max_vol = 0
 
-    'getting the ticker symbol and value
+'Get the Greated % increase, Greatest % decrease and Greatest total volume
     For i = 2 To LastRow
         If ws.Cells(i, 11).Value > max_incease Then
             max_incease = ws.Cells(i, 11).Value
@@ -116,7 +116,7 @@ For Each ws In Worksheets
         End If
     Next i
     
-    'formatting and filling in the values
+'Print to get values and ticker to show
     ws.Cells(2, 17).Value = max_incease_ticker
     ws.Cells(3, 17).Value = max_dec_ticker
     ws.Cells(4, 17).Value = max_vol_ticker
